@@ -1,0 +1,5 @@
+# Bars live on the "data" branch (written by FX Bars Pusher). Never commit them from here.
+data/
+trader/
+__pycache__/
+*.pyc
