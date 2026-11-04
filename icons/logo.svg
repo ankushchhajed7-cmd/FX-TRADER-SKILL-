@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1020"/>
+      <stop offset="1" stop-color="#17274A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE08A"/>
+      <stop offset="0.55" stop-color="#F5B83D"/>
+      <stop offset="1" stop-color="#D98E14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.3" r="0.55">
+      <stop offset="0" stop-color="#F5B83D" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#F5B83D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+  <!-- opening range box (content stays inside the 80% safe zone so the icon survives round and squircle masks) -->
+  <rect x="104" y="250" width="304" height="132" rx="16" fill="#F5B83D" fill-opacity="0.10"/>
+  <line x1="104" y1="250" x2="408" y2="250" stroke="#F5B83D" stroke-width="7" stroke-linecap="round"/>
+  <line x1="104" y1="382" x2="408" y2="382" stroke="#F5B83D" stroke-width="7" stroke-linecap="round" stroke-opacity="0.55"/>
+  <!-- three small candles inside the range -->
+  <g stroke="#8FA0C2" stroke-width="6" stroke-linecap="round">
+    <line x1="150" y1="282" x2="150" y2="352"/>
+    <line x1="206" y1="270" x2="206" y2="338"/>
+    <line x1="262" y1="294" x2="262" y2="362"/>
+  </g>
+  <g fill="#8FA0C2">
+    <rect x="136" y="300" width="28" height="36" rx="6"/>
+    <rect x="192" y="288" width="28" height="34" rx="6"/>
+    <rect x="248" y="312" width="28" height="34" rx="6"/>
+  </g>
+  <!-- the breakout: a bold gold arrow leaving the top of the range -->
+  <rect x="330" y="178" width="48" height="184" rx="12" fill="url(#gold)"/>
+  <polygon points="354,88 410,176 298,176" fill="url(#gold)" stroke="url(#gold)" stroke-width="14" stroke-linejoin="round"/>
+</svg>

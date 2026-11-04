@@ -9,6 +9,8 @@ Forex/gold version of the day-trader-skill pack. Same idea (opening-range breako
   - `fx-entry/fx_entry.py`: session range + entry trigger (long and short), `sync`, `check`. 15 offline tests pass.
   - NOT yet compiled in MetaEditor. NOT yet run against real bars.
 
+- **v1.10** (2026-11-04, branch `feature-v1.1.0`): app icons added in `icons/` (SVG source, 192/512 PNG, apple-touch, favicon) for the mobile dashboard app that comes later. EA and fx-entry are unchanged (EA still v1.00).
+
 ## Decisions
 - Instrument: XAUUSD only to start. Broker symbol is an input (Exness: `XAUUSDm`).
 - Sessions: London open 08:00 (Europe/London) and New York open 09:30 (America/New_York), both. DST follows each city's clock.
@@ -16,6 +18,7 @@ Forex/gold version of the day-trader-skill pack. Same idea (opening-range breako
 - No entries later than 180 minutes after the open (flag `--until-min`).
 - Data path: MT5 EA -> GitHub `data` branch (`data/XAUUSD/M5/YYYY-MM-DD.json`) -> `fx_entry.py sync`. The `data/` folder is git-ignored on every other branch.
 - Repo is private (it will later hold order tickets). The EA needs a fine-grained token, this repo only, Contents read+write. The token goes in the EA inputs only, never in chat or in a file.
+- Logo: gold arrow breaking out of an opening-range box on a dark navy background. Icon content is kept inside the maskable safe zone.
 - Bar JSON: `[time_utc_epoch, open, high, low, close, tick_volume, spread_points]`.
 
 ## Known limits (v1.00)
